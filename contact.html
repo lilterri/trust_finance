@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact - Trust Finance</title>
+    <link href="./output.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="bg-white text-gray-900">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+            
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 flex items-center justify-center bg-blue-800 text-white 
+                                font-bold rounded-xl shadow-md tracking-wide">
+                        TB
+                    </div>
+                    <a href="#" class="text-xl font-bold">TrustBank</a>
+                </div>
+                
+                <!-- Desktop Menu (hidden on md, visible on lg+) -->
+                <ul class="hidden lg:flex space-x-3 font-medium text-sm">
+                    <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+                    <li><a href="business.html" class="hover:text-blue-600">Business Banking</a></li>
+                    <li><a href="commercial.html" class="hover:text-blue-600">Commercial Banking</a></li>
+                    <li><a href="investment.html" class="hover:text-blue-600">Investment Services</a></li>
+                    <li><a href="loan.html" class="hover:text-blue-600">Loans</a></li>
+                    <li><a href="insurance.html" class="hover:text-blue-600">Insurance</a></li>
+                    <li><a href="about.html" class="hover:text-blue-600">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+                </ul>
+
+                <!-- Action Buttons (visible on lg and above only) -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <!-- Log In Link -->
+                    <a href="#" class="px-5 py-2 rounded-lg bg-gray-400 text-gray-700 font-medium hover:bg-gray-200 transition">
+                        Log In
+                    </a>
+                    <!-- Open Account Button -->
+                    <a href="#" class="px-5 py-2 rounded-xl bg-blue-800 text-white font-semibold shadow-md hover:bg-blue-900 hover:shadow-lg transition">
+                        Open Account
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button (visible on md and below) -->
+                <button id="mobile-menu-button" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu" class="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Mobile Menu (sliding from right, visible on md and below) -->
+        <div id="mobile-menu" class="lg:hidden fixed top-16 right-0 w-64 h-[calc(100vh-4rem)] translate-x-full transform transition-transform duration-300 ease-in-out bg-white shadow-lg px-4 py-6 z-50">
+            <a href="index.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Home</a>
+            <a href="business.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Business Banking</a>
+            <a href="commercial.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Commercial Banking</a>
+            <a href="investment.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Investment Services</a>
+            <a href="loan.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Loans</a>
+            <a href="insurance.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Insurance</a>
+            <a href="about.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">About Us</a>
+            <a href="contact.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Contact</a>
+        </div>
+    </nav>
+    <!-- HERO -->
+    <section class="py-12 md:py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center mt-15">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                We're here to help. Reach out to us anytime and we'll get back to you as soon as possible.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="py-12 md:py-16 lg:py-24">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
+
+                <!-- FORM -->
+                <div class="lg:col-span-2">
+                    <div class="border border-gray-300 rounded-xl shadow-sm bg-white">
+
+                        <div class="p-6 border-b">
+                        <h2 class="text-2xl font-bold">Send Us a Message</h2>
+                        <p class="text-gray-500">Fill out the form below and we'll respond within 24 hours</p>
+                        </div>
+
+                        <div class="p-6" id="form-wrapper">
+
+                        <!-- SUCCESS MESSAGE (HIDDEN BY DEFAULT) -->
+                        <div id="success-box" class="hidden text-center py-12">
+                            <div class="flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 mx-auto mb-4">
+                            <i class="fa-solid fa-envelope text-blue-600 text-2xl"></i>
+                            </div>
+
+                            <h3 class="text-xl font-semibold mb-2">Thank You!</h3>
+                            <p class="text-gray-600 mb-6">
+                            Your message has been sent successfully. We'll get back to you soon.
+                            </p>
+
+                            <button onclick="resetForm()" class="px-5 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700">Send Another Message</button>
+                        </div>
+
+                        <!-- CONTACT FORM -->
+                        <form id="contact-form" class="space-y-6">
+
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div>
+                                <label class="font-medium">First Name</label>
+                                <input type="text" class="w-full mt-1 border px-4 py-3 rounded-lg" placeholder="John" required>
+                            </div>
+                            <div>
+                                <label class="font-medium">Last Name</label>
+                                <input type="text" class="w-full mt-1 border px-4 py-3 rounded-lg" placeholder="Doe" required>
+                            </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div>
+                                <label class="font-medium">Email</label>
+                                <input type="email" class="w-full mt-1 border px-4 py-3 rounded-lg" placeholder="john@example.com" required>
+                            </div>
+                            <div>
+                                <label class="font-medium">Phone</label>
+                                <input type="tel" class="w-full mt-1 border px-4 py-3 rounded-lg" placeholder="(555) 123-4567" required>
+                            </div>
+                            </div>
+
+                            <div>
+                            <label class="font-medium">Subject</label>
+                            <select class="w-full mt-1 border px-4 py-3 rounded-lg" required>
+                                <option value="">Select a subject</option>
+                                <option>General Inquiry</option>
+                                <option>Account Support</option>
+                                <option>Loan Information</option>
+                                <option>Investment Services</option>
+                                <option>Business Banking</option>
+                                <option>Insurance</option>
+                                <option>Feedback</option>
+                            </select>
+                            </div>
+
+                            <div>
+                            <label class="font-medium">Message</label>
+                            <textarea class="w-full mt-1 border px-4 py-3 rounded-lg min-h-[150px]" placeholder="How can we help you?" required></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3 rounded-lg bg-blue-600 text-white text-lg hover:bg-blue-700">
+                            Send Message
+                            </button>
+
+                        </form>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTACT INFO CARDS -->
+                <div class="space-y-6">
+                
+                <div class="border border-gray-300 rounded-xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-md bg-blue-100">
+                        <i class="fa-solid fa-phone text-blue-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Phone</h3>
+                    </div>
+                    <p class="font-medium">1-800-TRUST-BANK</p>
+                    <p class="text-gray-500">(1-800-878-7822)</p>
+                    <p class="text-gray-500">24/7 Customer Service</p>
+                </div>
+
+                <div class="border border-gray-300 rounded-xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-md bg-blue-100">
+                        <i class="fa-solid fa-envelope text-blue-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Email</h3>
+                    </div>
+                    <p class="font-medium">customer.service@trustbank.com</p>
+                    <p class="text-gray-500">support@trustbank.com</p>
+                </div>
+
+                <div class="border border-gray-300 rounded-xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-md bg-blue-100">
+                        <i class="fa-solid fa-location-dot text-blue-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Headquarters</h3>
+                    </div>
+                    <p class="font-medium">123 Financial Plaza</p>
+                    <p class="text-gray-500">New York, NY 10004</p>
+                </div>
+
+                <div class="border border-gray-300 rounded-xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-md bg-blue-100">
+                        <i class="fa-solid fa-clock text-blue-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Branch Hours</h3>
+                    </div>
+                    <p class="font-medium">Mon-Fri: 9:00 AM - 5:00 PM</p>
+                    <p class="text-gray-500">Sat: 9:00 AM - 1:00 PM</p>
+                    <p class="text-gray-500">Sun: Closed</p>
+                </div>
+
+                </div>
+
+            </div>
+
+            <!-- BRANCH LIST -->
+            <div>
+                <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Visit Us</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Find a TrustBank branch near you
+                </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <div class="border border-gray-300 rounded-xl hover:shadow-md transition p-6">
+                    <h3 class="text-lg font-semibold">Manhattan Financial District</h3>
+                    <p class="text-gray-500 mt-1">123 Financial Plaza, New York, NY 10004</p>
+                    <button class="w-full mt-4 py-2 rounded-lg border border-blue-300 text-blue-600 bg-gray-200">
+                    Get Directions
+                    </button>
+                </div>
+
+                <div class="border border-gray-300 rounded-xl hover:shadow-md transition p-6">
+                    <h3 class="text-lg font-semibold">Brooklyn Heights Branch</h3>
+                    <p class="text-gray-500 mt-1">456 Court Street, Brooklyn, NY 11201</p>
+                    <button class="w-full mt-4 py-2 rounded-lg border border-blue-300 text-blue-600 bg-gray-200">
+                    Get Directions
+                    </button>
+                </div>
+
+                <div class="border border-gray-300 rounded-xl hover:shadow-md transition p-6">
+                    <h3 class="text-lg font-semibold">Queens Center</h3>
+                    <p class="text-gray-500 mt-1">789 Queens Blvd, Queens, NY 11374</p>
+                    <button class="w-full mt-4 py-2 rounded-lg border border-blue-300 text-blue-600 bg-gray-200">
+                    Get Directions
+                    </button>
+                </div>
+
+                <div class="border border-gray-300 rounded-xl hover:shadow-md transition p-6">
+                    <h3 class="text-lg font-semibold">Bronx Hub</h3>
+                    <p class="text-gray-500 mt-1">321 Grand Concourse, Bronx, NY 10451</p>
+                    <button class="w-full mt-4 py-2 rounded-lg border border-blue-300 text-blue-600 bg-gray-200">
+                    Get Directions
+                    </button>
+                </div>
+
+                </div>
+            </div>
+
+            </div>
+    </section>
+    <!-- footer -->
+    <footer class="border-t bg-muted/30">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+
+            <!-- Logo + Description -->
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                <div class="flex items-center justify-center w-10 h-10 rounded-md bg-primary">
+                    <span class="text-xl font-bold text-primary-foreground">TB</span>
+                </div>
+                <span class="text-xl font-bold">TrustBank</span>
+                </div>
+
+                <p class="text-sm text-muted-foreground mb-4">
+                Your trusted financial partner since 1985. Building stronger futures together.
+                </p>
+
+                <div class="flex gap-3">
+                <a href="#" class="p-2 rounded-md hover:bg-gray-200 transition">
+                    <i class="fab fa-facebook text-gray-500 text-lg"></i>
+                </a>
+                <a href="#" class="p-2 rounded-md hover:bg-gray-200 transition">
+                    <i class="fa-brands fa-x-twitter text-gray-500 text-lg"></i>
+                </a>
+                <a href="#" class="p-2 rounded-md hover:bg-gray-200 transition">
+                    <i class="fab fa-linkedin text-gray-500 text-lg"></i>
+                </a>
+                <a href="#" class="p-2 rounded-md hover:bg-gray-200 transition">
+                    <i class="fab fa-instagram text-gray-500 text-lg"></i>
+                </a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h3 class="font-semibold mb-4">Services</h3>
+                <ul class="space-y-3 text-sm">
+                <li><a href="business.html" class="text-muted-foreground hover:text-foreground">Business Banking</a></li>
+                <li><a href="commercial.html" class="text-muted-foreground hover:text-foreground">Commercial Banking</a></li>
+                <li><a href="investment.html" class="text-muted-foreground hover:text-foreground">Investment Services</a></li>
+                <li><a href="loan.html" class="text-muted-foreground hover:text-foreground">Loans</a></li>
+                <li><a href="insurance.html" class="text-muted-foreground hover:text-foreground">Insurance</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div>
+                <h3 class="font-semibold mb-4">Company</h3>
+                <ul class="space-y-3 text-sm">
+                <li><a href="about.html" class="text-muted-foreground hover:text-foreground">About Us</a></li>
+                <li><a href="contact.html" class="text-muted-foreground hover:text-foreground">Contact Us</a></li>
+                <li><a href="#" class="text-muted-foreground hover:text-foreground">Careers</a></li>
+                <li><a href="#" class="text-muted-foreground hover:text-foreground">Newsroom</a></li>
+                <li><a href="#" class="text-muted-foreground hover:text-foreground">Investor Relations</a></li>
+                </ul>
+            </div>
+
+            <!-- Security & Trust -->
+            <div>
+                <h3 class="font-semibold mb-4">Security & Trust</h3>
+                <div class="space-y-4">
+
+                <div class="flex items-start gap-3">
+                    <i class="fa-solid fa-shield-halved text-primary text-lg mt-1"></i>
+                    <div>
+                    <p class="text-sm font-medium">FDIC Insured</p>
+                    <p class="text-xs text-muted-foreground">Member FDIC</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                    <i class="fa-solid fa-lock text-primary text-lg mt-1"></i>
+                    <div>
+                    <p class="text-sm font-medium">Bank-Level Security</p>
+                    <p class="text-xs text-muted-foreground">256-bit SSL encryption</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                    <i class="fa-solid fa-building-columns text-primary text-lg mt-1"></i>
+                    <div>
+                    <p class="text-sm font-medium">Equal Housing Lender</p>
+                    <p class="text-xs text-muted-foreground">NMLS #123456</p>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-sm text-muted-foreground">
+                © <span id="year"></span> TrustBank. All rights reserved.
+            </p>
+
+            <div class="flex flex-wrap gap-4 md:gap-6 text-sm text-muted-foreground">
+                <a href="privacy.html" class="hover:text-foreground">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-foreground">Terms of Service</a>
+                <a href="#" class="hover:text-foreground">Accessibility</a>
+                <a href="#" class="hover:text-foreground">Site Map</a>
+            </div>
+            </div>
+
+        </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

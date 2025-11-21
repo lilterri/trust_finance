@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trust Finance</title>
+    <link href="./output.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+            
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 flex items-center justify-center bg-blue-800 text-white 
+                                font-bold rounded-xl shadow-md tracking-wide">
+                        TB
+                    </div>
+                    <a href="#" class="text-xl font-bold">TrustBank</a>
+                </div>
+                
+                <!-- Desktop Menu (hidden on md, visible on lg+) -->
+                <ul class="hidden lg:flex space-x-3 font-medium text-sm">
+                    <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+                    <li><a href="business.html" class="hover:text-blue-600">Business Banking</a></li>
+                    <li><a href="commercial.html" class="hover:text-blue-600">Commercial Banking</a></li>
+                    <li><a href="investment.html" class="hover:text-blue-600">Investment Services</a></li>
+                    <li><a href="loan.html" class="hover:text-blue-600">Loans</a></li>
+                    <li><a href="insurance.html" class="hover:text-blue-600">Insurance</a></li>
+                    <li><a href="about.html" class="hover:text-blue-600">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+                </ul>
+
+                <!-- Action Buttons (visible on lg and above only) -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <!-- Log In Link -->
+                    <a href="#" class="px-5 py-2 rounded-lg bg-gray-400 text-gray-700 font-medium hover:bg-gray-200 transition">
+                        Log In
+                    </a>
+                    <!-- Open Account Button -->
+                    <a href="#" class="px-5 py-2 rounded-xl bg-blue-800 text-white font-semibold shadow-md hover:bg-blue-900 hover:shadow-lg transition">
+                        Open Account
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button (visible on md and below) -->
+                <button id="mobile-menu-button" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu" class="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Mobile Menu (sliding from right, visible on md and below) -->
+        <div id="mobile-menu" class="lg:hidden fixed top-16 right-0 w-64 h-[calc(100vh-4rem)] translate-x-full transform transition-transform duration-300 ease-in-out bg-white shadow-lg px-4 py-6 z-50">
+            <a href="index.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Home</a>
+            <a href="business.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Business Banking</a>
+            <a href="commercial.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Commercial Banking</a>
+            <a href="investment.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Investment Services</a>
+            <a href="loan.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Loans</a>
+            <a href="insurance.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Insurance</a>
+            <a href="about.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">About Us</a>
+            <a href="contact.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-[500px] md:h-[600px] flex items-center justify-center overflow-hidden">
+        <img src="src/image/trust-hero.png" alt="Professional banking team" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                Banking Built on Trust
+            </h1>
+            <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Experience personalized financial solutions designed to help you achieve your goals and secure your future.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#" class="inline-flex items-center px-6 py-3 bg-white/20 border border-white/30 text-white rounded-md backdrop-blur-md hover:bg-white/30 transition">
+                Get Started
+                <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+                </a>
+                <a href="#" class="inline-flex items-center px-6 py-3 bg-white/10 border border-white/30 text-white rounded-md backdrop-blur-md hover:bg-white/20 transition">
+                Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 md:py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">40+</div>
+                    <div class="text-sm md:text-base text-gray-600">Years of Service</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">2M+</div>
+                    <div class="text-sm md:text-base text-gray-600">Happy Customers</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">$50B+</div>
+                    <div class="text-sm md:text-base text-gray-600">Assets Under Management</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">500+</div>
+                    <div class="text-sm md:text-base text-gray-600">Branch Locations</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section class="py-12 md:py-16 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Comprehensive financial solutions tailored to your unique needs
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Service 1 -->
+                <a href="business.html" class="h-full p-6 rounded-lg border border-gray-300 hover:shadow-lg transition flex flex-col">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-md bg-blue-100 mb-4">
+                    <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"/>
+                    </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Business Banking</h3>
+                    <p class="text-gray-600 mb-4">Tailored solutions for small and medium-sized businesses</p>
+                    <span class="text-blue-600 flex items-center gap-1">Learn More
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                    </span>
+                </a>
+
+                <!-- Service 2 -->
+                <a href="commercial.html" class="h-full p-6 rounded-lg border border-gray-300 hover:shadow-lg transition flex flex-col">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-md bg-blue-100 mb-4">
+                        <!-- Commercial / Bank Icon -->
+                        <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-8l9-4 9 4v8H3z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 21V12h6v9"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Commercial Banking</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive financial services for large corporations</p>
+                    <span class="text-blue-600 flex items-center gap-1">Learn More
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Service 3 -->
+                <a href="investment.html" class="h-full p-6 rounded-lg border border-gray-300 hover:shadow-lg transition flex flex-col">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-md bg-blue-100 mb-4">
+                        <!-- Investment / Growth Chart Icon -->
+                        <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 17l6-6 4 4 8-8"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 3v6h-6"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Investment Services</h3>
+                    <p class="text-gray-600 mb-4">Grow your wealth with expert investment guidance</p>
+                    <span class="text-blue-600 flex items-center gap-1">Learn More
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Service 4 -->
+                <a href="loans.html" class="h-full p-6 rounded-lg border border-gray-300 hover:shadow-lg transition flex flex-col">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-md bg-blue-100 mb-4">
+                        <!-- Loan / Money Icon -->
+                        <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <rect x="2" y="6" width="20" height="12" rx="2" ry="2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="2" y1="10" x2="22" y2="10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Loans</h3>
+                    <p class="text-gray-600 mb-4">Competitive rates on personal, auto, and home loans</p>
+                    <span class="text-blue-600 flex items-center gap-1">Learn More
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Service 5 -->
+                <a href="insurance.html" class="h-full p-6 rounded-lg border border-gray-300 hover:shadow-lg transition flex flex-col">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-md bg-blue-100 mb-4">
+                        <!-- Shield Icon -->
+                        <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l9 4v6c0 5.25-3.75 10-9 12-5.25-2-9-6.75-9-12V6l9-4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Insurance</h3>
+                    <p class="text-gray-600 mb-4">Protect what matters most with comprehensive coverage</p>
+                    <span class="text-blue-600 flex items-center gap-1">Learn More
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Service 6 -->
+                <a href="credit-cards.html" class="h-full p-6 rounded-lg border border-gray-300 hover:shadow-lg transition flex flex-col">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-md bg-blue-100 mb-4">
+                        <!-- Credit Card Icon -->
+                        <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <rect x="2" y="5" width="20" height="14" rx="2" ry="2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="2" y1="10" x2="22" y2="10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Credit Cards</h3>
+                    <p class="text-gray-600 mb-4">Rewards and benefits designed for your lifestyle</p>
+                    <span class="text-blue-600 flex items-center gap-1">Learn More
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Security Section -->
+    <section class="py-12 md:py-16 lg:py-24 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Your Security is Our Priority</h2>
+                    <p class="text-lg mb-8 max-w-xl">
+                        We employ the latest security measures to protect your financial information and give you peace of mind.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-md bg-white/20">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11V7m0 4l-4 4m4-4l4 4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-1">Bank-Level Encryption</h3>
+                            <p class="text-sm text-white/80">256-bit SSL encryption protects all your transactions and personal data.</p>
+                        </div>
+                        </div>
+                        <!-- Repeat Shield, Users -->
+                    </div>
+                </div>
+                <div class="flex items-center justify-center">
+                    <div class="grid grid-cols-2 gap-6 w-full max-w-md">
+                        <div class="bg-white/20 p-4 rounded-lg text-center">
+                        <h4 class="font-semibold mb-1">Best Security</h4>
+                        <p class="text-sm">Industry Award 2024</p>
+                        </div>
+                        <div class="bg-white/20 p-4 rounded-lg text-center">
+                        <h4 class="font-semibold mb-1">A+ Rating</h4>
+                        <p class="text-sm">Better Business Bureau</p>
+                        </div>
+                        <!-- Repeat other cards -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 md:py-16 lg:py-24 text-center">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
+            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                Open an account today and experience the TrustBank difference.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition">
+                Open an Account
+                <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+                </a>
+                <a href="contact.html" class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-md bg-blue-50 transition">
+                Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="border-t bg-muted/30">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+
+            <!-- Logo + Description -->
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                <div class="flex items-center justify-center w-10 h-10 rounded-md bg-primary">
+                    <span class="text-xl font-bold text-primary-foreground">TB</span>
+                </div>
+                <span class="text-xl font-bold">TrustBank</span>
+                </div>
+
+                <p class="text-sm text-muted-foreground mb-4">
+                Your trusted financial partner since 1985. Building stronger futures together.
+                </p>
+
+                <div class="flex gap-3">
+                <a href="#" class="p-2 rounded-md hover:bg-gray-200 transition">
+                    <i class="fab fa-facebook text-gray-500 text-lg"></i>
+                </a>
+                <a href="#" class="p-2 rounded-md hover:bg-gray-200 transition">
+                    <i class="fa-brands fa-x-twitter text-gray-500 text-lg"></i>
+                </a>
+                <a href="#" class="p-2 rounded-md hover:bg-gray-200 transition">
+                    <i class="fab fa-linkedin text-gray-500 text-lg"></i>
+                </a>
+                <a href="#" class="p-2 rounded-md hover:bg-gray-200 transition">
+                    <i class="fab fa-instagram text-gray-500 text-lg"></i>
+                </a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h3 class="font-semibold mb-4">Services</h3>
+                <ul class="space-y-3 text-sm">
+                <li><a href="business.html" class="text-muted-foreground hover:text-foreground">Business Banking</a></li>
+                <li><a href="commercial.html" class="text-muted-foreground hover:text-foreground">Commercial Banking</a></li>
+                <li><a href="investment.html" class="text-muted-foreground hover:text-foreground">Investment Services</a></li>
+                <li><a href="loan.html" class="text-muted-foreground hover:text-foreground">Loans</a></li>
+                <li><a href="insurance.html" class="text-muted-foreground hover:text-foreground">Insurance</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div>
+                <h3 class="font-semibold mb-4">Company</h3>
+                <ul class="space-y-3 text-sm">
+                <li><a href="about.html" class="text-muted-foreground hover:text-foreground">About Us</a></li>
+                <li><a href="contact.html" class="text-muted-foreground hover:text-foreground">Contact Us</a></li>
+                <li><a href="#" class="text-muted-foreground hover:text-foreground">Careers</a></li>
+                <li><a href="#" class="text-muted-foreground hover:text-foreground">Newsroom</a></li>
+                <li><a href="#" class="text-muted-foreground hover:text-foreground">Investor Relations</a></li>
+                </ul>
+            </div>
+
+            <!-- Security & Trust -->
+            <div>
+                <h3 class="font-semibold mb-4">Security & Trust</h3>
+                <div class="space-y-4">
+
+                <div class="flex items-start gap-3">
+                    <i class="fa-solid fa-shield-halved text-primary text-lg mt-1"></i>
+                    <div>
+                    <p class="text-sm font-medium">FDIC Insured</p>
+                    <p class="text-xs text-muted-foreground">Member FDIC</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                    <i class="fa-solid fa-lock text-primary text-lg mt-1"></i>
+                    <div>
+                    <p class="text-sm font-medium">Bank-Level Security</p>
+                    <p class="text-xs text-muted-foreground">256-bit SSL encryption</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                    <i class="fa-solid fa-building-columns text-primary text-lg mt-1"></i>
+                    <div>
+                    <p class="text-sm font-medium">Equal Housing Lender</p>
+                    <p class="text-xs text-muted-foreground">NMLS #123456</p>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-sm text-muted-foreground">
+                © <span id="year"></span> TrustBank. All rights reserved.
+            </p>
+
+            <div class="flex flex-wrap gap-4 md:gap-6 text-sm text-muted-foreground">
+                <a href="privacy.html" class="hover:text-foreground">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-foreground">Terms of Service</a>
+                <a href="#" class="hover:text-foreground">Accessibility</a>
+                <a href="#" class="hover:text-foreground">Site Map</a>
+            </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
