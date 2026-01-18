@@ -6,7 +6,35 @@
     <title>Terms of Service - TrustBank</title>
     <link href="./output.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <style>
+      /* Mobile dropdown: drop from top, 60% height, centered text, sharp hover (shared across pages) */
+      #mobile-menu{
+        position:fixed;
+        left:0;
+        right:0;
+        top:4rem;
+        height:60vh;
+        width:100%;
+        transform:translateY(-120%);
+        transition:transform 600ms cubic-bezier(.2,.8,.2,1), opacity 120ms linear;
+        background:#fff;
+        box-shadow:0 20px 40px rgba(0,0,0,0.12);
+        z-index:50;
+        padding:1.25rem 1rem;
+        display:flex;
+        flex-direction:column;
+        gap:0.25rem;
+        align-items:center;
+        justify-content:center;
+        opacity:0;
+        pointer-events:none;
+      }
+      #mobile-menu.open{ transform:translateY(0); opacity:1; pointer-events:auto; }
+      #mobile-menu a{ width:100%; text-align:center; padding:0.75rem 1rem; border-radius:0.5rem; color:#0f172a; font-weight:600; transition: background-color 60ms steps(1,end), color 60ms steps(1,end); }
+      #mobile-menu a:hover{ background-color: rgba(220,38,38,0.15); color: #b91c1c; }
+      @media(min-width:1024px){ #mobile-menu{ display:none !important; } }
+    </style>
   </head>
   <body class="bg-gray-50 text-gray-800">
     <!-- Navbar -->
@@ -41,15 +69,15 @@
           </button>
         </div>
       </div>
-      <div id="mobile-menu" class="lg:hidden fixed top-16 right-0 w-64 h-[calc(100vh-4rem)] translate-x-full transform transition-transform duration-300 ease-in-out bg-white shadow-lg px-4 py-6 z-50">
-        <a href="index.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Home</a>
-        <a href="business.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Business Banking</a>
-        <a href="commercial.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Commercial Banking</a>
-        <a href="investment.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Investment Services</a>
-        <a href="loan.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Loans</a>
-        <a href="insurance.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Insurance</a>
-        <a href="about.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">About Us</a>
-        <a href="contact.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Contact</a>
+      <div id="mobile-menu" class="lg:hidden z-50" aria-hidden="true">
+        <a href="index.html">Home</a>
+        <a href="business.html">Business Banking</a>
+        <a href="commercial.html">Commercial Banking</a>
+        <a href="investment.html">Investment Services</a>
+        <a href="loan.html">Loans</a>
+        <a href="insurance.html">Insurance</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
       </div>
     </nav>
 

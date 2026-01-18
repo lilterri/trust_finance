@@ -7,6 +7,34 @@
     <link href="./output.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            /* Mobile dropdown: drop from top, 60% height, centered text, sharp hover (shared across pages) */
+            #mobile-menu{
+                position:fixed;
+                left:0;
+                right:0;
+                top:4rem;
+                height:60vh;
+                width:100%;
+                transform:translateY(-120%);
+                transition:transform 600ms cubic-bezier(.2,.8,.2,1), opacity 120ms linear;
+                background:#fff;
+                box-shadow:0 20px 40px rgba(0,0,0,0.12);
+                z-index:50;
+                padding:1.25rem 1rem;
+                display:flex;
+                flex-direction:column;
+                gap:0.25rem;
+                align-items:center;
+                justify-content:center;
+                opacity:0;
+                pointer-events:none;
+            }
+            #mobile-menu.open{ transform:translateY(0); opacity:1; pointer-events:auto; }
+            #mobile-menu a{ width:100%; text-align:center; padding:0.75rem 1rem; border-radius:0.5rem; color:#0f172a; font-weight:600; transition: background-color 60ms steps(1,end), color 60ms steps(1,end); }
+            #mobile-menu a:hover{ background-color: rgba(220,38,38,0.15); color: #b91c1c; }
+            @media(min-width:1024px){ #mobile-menu{ display:none !important; } }
+        </style>
   </head>
   <body class="bg-gray-50 text-gray-800">
     <!-- Navbar -->
@@ -62,16 +90,16 @@
             </div>
         </div>
 
-        <!-- Mobile Menu (sliding from right, visible on md and below) -->
-        <div id="mobile-menu" class="lg:hidden fixed top-16 right-0 w-64 h-[calc(100vh-4rem)] translate-x-full transform transition-transform duration-300 ease-in-out bg-white shadow-lg px-4 py-6 z-50">
-            <a href="index.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Home</a>
-            <a href="business.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Business Banking</a>
-            <a href="commercial.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Commercial Banking</a>
-            <a href="investment.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Investment Services</a>
-            <a href="loan.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Loans</a>
-            <a href="insurance.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Insurance</a>
-            <a href="about.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">About Us</a>
-            <a href="contact.html" class="block px-3 py-2 rounded-md hover:bg-blue-50">Contact</a>
+        <!-- Mobile Menu (dropdown from top on small screens) -->
+        <div id="mobile-menu" class="lg:hidden z-50" aria-hidden="true">
+            <a href="index.html">Home</a>
+            <a href="business.html">Business Banking</a>
+            <a href="commercial.html">Commercial Banking</a>
+            <a href="investment.html">Investment Services</a>
+            <a href="loan.html">Loans</a>
+            <a href="insurance.html">Insurance</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
         </div>
     </nav>
     <!-- HERO SECTION -->
@@ -88,6 +116,11 @@
             <p class="text-lg md:text-xl text-white/90 max-w-2xl">
             Comprehensive coverage to protect what matters most
             </p>
+            <div class="flex flex-col sm:flex-row  justify-center mt-8">
+                <a href="#" class="inline-flex items-center px-6 py-3 bg-white/10 border border-white/30 text-white rounded-md backdrop-blur-md hover:bg-white/20 transition">
+                    Log In
+                </a>
+            </div>
         </div>
     </section>
 
@@ -148,7 +181,7 @@
                         Competitive premiums
                     </li>
                     </ul>
-                    <div class="mt-5 w-full flex items-center justify-center gap-2 py-2 border border-gray-300 text-center rounded-md bg-gray-100 hover:bg-blue-50 transition text-blue-600">
+                    <div class="mt-5 w-full flex items-center justify-center gap-2 py-2 border border-gray-300 text-center rounded-md bg-[#033d75] text-white">
                         <a href="#">Get a Quote</a>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
                         viewBox="0 0 24 24">
@@ -202,7 +235,7 @@
                         Flexible deductible options
                     </li>
                     </ul>
-                    <div class="mt-5 w-full flex items-center justify-center gap-2 py-2 border border-gray-300 text-center rounded-md bg-gray-100 hover:bg-blue-50 transition text-blue-600">
+                    <div class="mt-5 w-full flex items-center justify-center gap-2 py-2 border border-gray-300 text-center rounded-md bg-[#033d75] text-white">
                         <a href="#">Get a Quote</a>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
                         viewBox="0 0 24 24">
@@ -268,7 +301,7 @@
                         Flexible payment options
                     </li>
                     </ul>
-                    <div class="mt-5 w-full flex items-center justify-center gap-2 py-2 border border-gray-300 text-center rounded-md bg-gray-100 hover:bg-blue-50 transition text-blue-600">
+                    <div class="mt-5 w-full flex items-center justify-center gap-2 py-2 border border-gray-300 text-center rounded-md bg-[#033d75] text-white">
                         <a href="#">Get a Quote</a>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
                         viewBox="0 0 24 24">
@@ -330,7 +363,7 @@
                         Employee coverage options
                     </li>
                     </ul>
-                    <div class="mt-5 w-full flex items-center justify-center gap-2 py-2 border border-gray-300 text-center rounded-md bg-gray-100 hover:bg-blue-50 transition text-blue-600">
+                    <div class="mt-5 w-full flex items-center justify-center gap-2 py-2 border border-gray-300 text-center rounded-md bg-[#033d75] text-white">
                         <a href="#">Get a Quote</a>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
                         viewBox="0 0 24 24">
@@ -372,19 +405,19 @@
             <!-- STATS -->
                 <div class="grid grid-cols-2 gap-6">
                     <div class="border border-gray-300 rounded-xl p-6 text-center shadow-sm">
-                        <p class="text-3xl font-bold text-blue-600">98%</p>
+                        <p class="text-3xl font-bold text-[#033d75]">98%</p>
                         <p class="text-gray-600">Claims Approved</p>
                     </div>
                     <div class="border border-gray-300 rounded-xl p-6 text-center shadow-sm">
-                        <p class="text-3xl font-bold text-blue-600">48hr</p>
+                        <p class="text-3xl font-bold text-[#033d75]">48hr</p>
                         <p class="text-gray-600">Avg. Processing</p>
                     </div>
                     <div class="border border-gray-300 rounded-xl p-6 text-center shadow-sm">
-                        <p class="text-3xl font-bold text-blue-600">500K+</p>
+                        <p class="text-3xl font-bold text-[#033d75]">500K+</p>
                         <p class="text-gray-600">Active Policies</p>
                     </div>
                     <div class="border border-gray-300 rounded-xl p-6 text-center shadow-sm">
-                        <p class="text-3xl font-bold text-blue-600">4.8★</p>
+                        <p class="text-3xl font-bold text-[#033d75]">4.8★</p>
                         <p class="text-gray-600">Customer Rating</p>
                     </div>
                 </div>
@@ -431,10 +464,10 @@
     </section>
 
     <!-- BOTTOM CTA -->
-    <section class="py-12 md:py-16 bg-gray-100">
+    <section class="py-12 md:py-16 bg-[#033d75]">
         <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Get Your Free Quote Today</h2>
-            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Get Your Free Quote Today</h2>
+            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto text-white">
             Speak with an insurance specialist today.
             </p>
 
